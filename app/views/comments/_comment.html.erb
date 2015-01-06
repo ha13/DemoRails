@@ -1,16 +1,9 @@
-<div class="table-responsive"
-  <table class="table">
-    <tr>
-      <th>Commenter</th>
-      <th>Comment</th>
-      <th></th>
-    </tr>
-    <tr>
-      <td><%= comment.commenter %></td>
-      <td> <%= comment.body %></td>
-      <td> <%= link_to 'Destroy Comment', [comment.article, comment],
-                   method: :delete,
-                   data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  </table>
-</div>
+
+  <tr>
+    <td><%= comment.commenter %></td>
+    <td><%= comment.body %></td>
+    <td><%= link_to 'Destroy Comment', [comment.post, comment],
+                         method: :delete,
+                         data: { confirm: 'Are you sure?' } %></td>
+    <td><%= comment.created_at%></td>
+  </tr>

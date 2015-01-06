@@ -16,6 +16,7 @@ footer{
   margin-top: 30px;
   padding-top: 5px;
   border-top: 2px solid $gray;
+  clear: both;
   small{
     float:left;
   }
@@ -28,7 +29,14 @@ footer{
     }
   }
 }
-
+.pagination{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.add-comment{
+  clear: both;
+  //border-top: 2px solid $gray;
+}
 
 
 

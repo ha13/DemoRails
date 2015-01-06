@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Incoming comment form <%= @comment.commenter %>!</h1>
+    <p>Body: <%=@comment.body%></p>
+    <p><%= link_to "Back to current post",post_path(Comment.find(@comment).select(:post_id))%></p>
+  </body>
+</html>

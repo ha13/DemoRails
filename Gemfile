@@ -43,3 +43,4 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem 'delayed_job_active_record'
 gem 'friendly_id','5.0.4'
 gem 'devise'
+gem "daemons"

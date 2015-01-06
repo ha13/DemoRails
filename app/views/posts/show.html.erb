@@ -1,4 +1,6 @@
-<table>
+<h2>Post of <%= current_user.email%></h2>
+<div class="table-responsive">
+<table class="table">
   <tr>
     <th>Title</th>
     <th>Text</th>
@@ -8,11 +10,24 @@
     <td><%= @post.text %></td>
   </tr>
 </table>
+</div>
 <h2>Comments</h2>
-<%= render @post.comments.order(created_at: :desc) %>
-<%= will_paginate%>
-<h2>Add a comment:</h2>
-<%= render 'comments/comment_form'%>
+<div class="table-responsive" id="list-comments">
+  <table class="table " >
+    <tr>
+      <th>Commenter</th>
+      <th>Comment</th>
 
-<%= link_to 'Edit Article', edit_post_path(@post) %> |
-<%= link_to 'Back to Articles', posts_path %>
+    </tr>
+    <%= render @comments %>
+  </table>
+  <div class="pull-right">
+    <%= will_paginate @comments%>
+  </div>
+</div>
+<div class="add-comment">
+  <h2>Add a comment:</h2>
+  <%= render 'comments/comment_form'%>
+</div>
+<%= link_to 'Edit Post', edit_post_path(@post) %> |
+<%= link_to 'Back to Posts', posts_path %>

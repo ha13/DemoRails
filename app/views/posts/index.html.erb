@@ -19,13 +19,13 @@
           <%= a.text%>
         </td>
         <td>
-          <%= a.Comments.count%>
+          <%= a.comments.count%>
         </td>
         <td>
           <%= link_to 'Show', a %>
         </td>
         <td>
-          <%= link_to 'Edit', a %>
+          <%= link_to 'Edit', edit_post_path(a) %>
         </td>
         <td>
           <%= link_to 'Delete', a, method: :delete,data: {confirm: "Are u sure ?"}%>
@@ -33,7 +33,10 @@
       </tr>
     <%}%>
   </table>
-<%= will_paginate%>
+  <div class="pull-right">
+    <%= will_paginate%>
+  </div>
+  <div class="pull-left">
+    <%= link_to 'New Post', new_post_path %>
+  </div>
 </div>
-<%= link_to 'New Article', new_post_path %></br>
-
