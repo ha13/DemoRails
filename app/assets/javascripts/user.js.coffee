@@ -2,6 +2,13 @@ $(document).ready ->
   $("#new_user").validate
     # debug: true
     rules:
+      "user[name]":
+        required: true
+        minlength: 6
+
+      "user[login]":
+        required: true
+
       "user[email]":
         required: true
         email: true
@@ -15,6 +22,13 @@ $(document).ready ->
         equalTo: "#user_password"
 
     messages:
+      "user[name]":
+        required: "Name can't be blank"
+        minlength: "Name is too short(minimum is 6 characters)"
+
+      "user[name]":
+        required: "Please input name or email"
+
       "user[email]":
         required: "Email can't be blank"
         email:"Email is invalid"

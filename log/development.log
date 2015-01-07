@@ -31205,3 +31205,1218 @@ Migrating to AddDetailToUser (20150107074826)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-07 15:51:24 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (undefined local variable or method `protected' for main:Object):
+  app/controllers/application_controller.rb:8:in `<top (required)>'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (86.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-07 15:51:47 +0700
+
+ActionController::RoutingError (undefined local variable or method `protected' for main:Object):
+  app/controllers/application_controller.rb:8:in `<top (required)>'
+  app/controllers/posts_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-07 15:53:05 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."user_id" = ? LIMIT 15 OFFSET 0[0m  [["user_id", 2]]
+  Rendered posts/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 310ms (Views: 269.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 15:53:06 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 15:53:06 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 15:53:06 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:06 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:06 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 15:53:06 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:06 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:06 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:06 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:06 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:06 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:06 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:06 +0700
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-07 15:53:09 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3YV2Gtpx46jP4gsmP6+H7yQSoCZTw37ognsBtpgxE3o="}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-07 15:53:09 +0700
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-07 15:53:09 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 316ms (Views: 313.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 15:53:10 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 15:53:10 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 15:53:10 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:10 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:10 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 15:53:10 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:10 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:10 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:10 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:10 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:10 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:10 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 15:53:10 +0700
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-07 15:53:15 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 304ms (Views: 302.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-07 15:53:21 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 324ms (Views: 322.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-07 15:53:22 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (24.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 321ms (Views: 319.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-07 15:55:07 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (28.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 336ms (Views: 333.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 15:55:07 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 15:55:07 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:07 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:07 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 15:55:07 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 15:55:07 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:07 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:07 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:07 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:08 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:08 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:08 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:08 +0700
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-07 15:55:31 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (19.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 324ms (Views: 321.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 15:55:32 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 15:55:32 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 15:55:32 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 15:55:32 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:32 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:32 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:32 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:32 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:32 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:32 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:32 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:32 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 15:55:32 +0700
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-07 15:58:33 +0700
+
+ArgumentError (Range unspecified. Specify the :in, :within, :maximum, :minimum, or :is option.):
+  app/models/user.rb:7:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  config/routes.rb:2:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-07 15:59:02 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (33.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1057ms (Views: 1049.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 15:59:04 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 15:59:04 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 15:59:04 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 15:59:04 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 15:59:04 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 15:59:04 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 15:59:04 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 15:59:04 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 15:59:04 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 15:59:04 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 15:59:04 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 15:59:04 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 15:59:04 +0700
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-07 16:02:06 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (31.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 342ms (Views: 331.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:02:06 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:02:06 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:02:06 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:02:06 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:02:06 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:02:06 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:02:07 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:02:07 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:02:07 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:02:07 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:02:07 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:02:07 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:02:07 +0700
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-07 16:03:35 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 574ms (Views: 571.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:03:36 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:03:36 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:03:36 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:03:36 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:03:36 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:03:36 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:03:36 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:03:36 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:03:36 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:03:36 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:03:36 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:03:36 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:03:36 +0700
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-07 16:08:24 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 302ms (Views: 300.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:08:25 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:08:25 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:08:25 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:08:25 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:08:25 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:08:25 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:08:25 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:08:25 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:08:25 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:08:25 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:08:25 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:08:25 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:08:25 +0700
+
+
+Started POST "/users" for 127.0.0.1 at 2015-01-07 16:12:12 +0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LjCKuVWbK/jnlK6B4Ciop2P0K1cmmyPuKzcZ6jd2idA=", "user"=>{"name"=>"hath13", "email"=>"hath13@hath.hath", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'hath13@hath.hath' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."name") = LOWER('hath13') LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-01-07 09:12:12.733924"], ["email", "hath13@hath.hath"], ["encrypted_password", "$2a$10$H2hpisSpr.u2O4aZLjxI3.VjXnYHL6P35bP1eJS8eQLrNfj0h4pri"], ["name", "hath13"], ["updated_at", "2015-01-07 09:12:12.733924"]]
+  [1m[36m (453.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 3[0m  [["current_sign_in_at", "2015-01-07 09:12:13.193641"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2015-01-07 09:12:13.193641"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2015-01-07 09:12:13.195504"]]
+  [1m[35m (172.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 809ms (ActiveRecord: 630.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-07 16:12:13 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (10.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (5.2ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."user_id" = ? LIMIT 15 OFFSET 0  [["user_id", 3]]
+  Rendered posts/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 402ms (Views: 359.4ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:12:14 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:12:14 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:12:14 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:12:14 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:12:14 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:12:14 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:12:14 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:12:14 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:12:14 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:12:14 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:12:14 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:12:14 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:12:14 +0700
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-01-07 16:12:18 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."user_id" = ? LIMIT 15 OFFSET 0  [["user_id", 3]]
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 391ms (Views: 385.0ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-07 16:13:00 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LjCKuVWbK/jnlK6B4Ciop2P0K1cmmyPuKzcZ6jd2idA="}
+  [1m[36mUser Load (7.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-07 16:13:00 +0700
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-07 16:13:00 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 618ms (Views: 615.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:13:01 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:13:01 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:13:01 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:13:01 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:13:01 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:13:01 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:13:01 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:13:01 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:13:01 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:13:01 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:13:01 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:13:01 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:13:01 +0700
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-07 16:14:30 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 251ms (Views: 249.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:14:31 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:14:31 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:14:31 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:14:31 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:14:31 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:14:31 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:14:31 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:14:31 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:14:31 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:14:31 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:14:31 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:14:31 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:14:31 +0700
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-01-07 16:15:26 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dLSRtre/H7QmgqgwBXMbUZrN7FXyweb0dkK78YeH89E=", "user"=>{"email"=>"ha1@ha.ha", "login"=>"hath13", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE (lower(name) = 'hath13' OR lower(email) = 'hath13')  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  UPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = 3  [["remember_created_at", "2015-01-07 09:15:26.534905"], ["updated_at", "2015-01-07 09:15:26.535863"]]
+  [1m[36m (248.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.9ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 3[0m  [["current_sign_in_at", "2015-01-07 09:15:26.788414"], ["sign_in_count", 2], ["updated_at", "2015-01-07 09:15:26.789611"]]
+  [1m[35m (152.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 536ms (ActiveRecord: 409.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-07 16:15:26 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."user_id" = ? LIMIT 15 OFFSET 0  [["user_id", 3]]
+  Rendered posts/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 239ms (Views: 234.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:15:27 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:15:27 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:15:27 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:15:27 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:15:27 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:15:27 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:15:27 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:15:27 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:15:27 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:15:27 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:15:27 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:15:27 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:15:27 +0700
+
+
+Started GET "/users/edit.3" for 127.0.0.1 at 2015-01-07 16:15:34 +0700
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 475ms (Views: 471.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/edit.3" for 127.0.0.1 at 2015-01-07 16:16:04 +0700
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 483ms (Views: 478.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:16:05 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:16:05 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:16:05 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:16:05 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:05 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:05 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:05 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:05 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:05 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:05 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:05 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:05 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:05 +0700
+
+
+Started GET "/users/edit.3" for 127.0.0.1 at 2015-01-07 16:16:33 +0700
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 590ms (Views: 586.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:16:34 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:16:34 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:16:34 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:34 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:34 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:34 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:34 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:34 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:16:34 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:34 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:34 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:34 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:34 +0700
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-07 16:16:36 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Re16Sjvvaqi3pFKm33V85iZJjzrYoE0x4pD9b2ZWFT8="}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  UPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = 3  [["remember_created_at", nil], ["updated_at", "2015-01-07 09:16:36.209680"]]
+  [1m[36m (164.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 179ms (ActiveRecord: 167.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-07 16:16:36 +0700
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-07 16:16:36 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 314ms (Views: 311.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:16:36 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:16:36 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:16:36 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:36 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:37 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:16:37 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:37 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:37 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:37 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:37 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:37 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:37 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:16:37 +0700
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-01-07 16:16:59 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QldQceI0Dodn15iShW8SdHD+oygzdoJnNYxcYzurKzw=", "user"=>{"login"=>"hath13@hath.hath", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Login"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE (lower(name) = 'hath13@hath.hath' OR lower(email) = 'hath13@hath.hath')  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  UPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = 3  [["remember_created_at", "2015-01-07 09:16:59.499031"], ["updated_at", "2015-01-07 09:16:59.499762"]]
+  [1m[36m (140.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.7ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 3[0m  [["current_sign_in_at", "2015-01-07 09:16:59.644472"], ["last_sign_in_at", "2015-01-07 09:15:26.788414"], ["sign_in_count", 3], ["updated_at", "2015-01-07 09:16:59.646138"]]
+  [1m[35m (158.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 446ms (ActiveRecord: 304.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-07 16:16:59 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPost Load (0.7ms)[0m  SELECT  "posts".* FROM "posts"  WHERE "posts"."user_id" = ? LIMIT 15 OFFSET 0  [["user_id", 3]]
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 350ms (Views: 343.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:00 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:00 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:00 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:00 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:00 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:00 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:00 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:00 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:00 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:00 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:00 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:00 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:00 +0700
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-07 16:17:02 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Gr4xSzUShFiGeLoFfjF33Ks+IEHv38unrpySLR4agqE="}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = 3[0m  [["remember_created_at", nil], ["updated_at", "2015-01-07 09:17:02.362883"]]
+  [1m[35m (365.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 374ms (ActiveRecord: 367.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-07 16:17:02 +0700
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-07 16:17:02 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 312ms (Views: 310.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:03 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:03 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:03 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:03 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:03 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:03 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:03 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:03 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:03 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:03 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:03 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:03 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:03 +0700
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-01-07 16:17:12 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z8uSNjm7Q9EPjOR81zQvARPAiUSAUVKiG9sjG3p1SiY=", "user"=>{"login"=>"hath13", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE (lower(name) = 'hath13' OR lower(email) = 'hath13')  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = 3[0m  [["remember_created_at", "2015-01-07 09:17:12.866710"], ["updated_at", "2015-01-07 09:17:12.867494"]]
+  [1m[35m (351.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 3  [["current_sign_in_at", "2015-01-07 09:17:13.223456"], ["last_sign_in_at", "2015-01-07 09:16:59.644472"], ["sign_in_count", 4], ["updated_at", "2015-01-07 09:17:13.226595"]]
+  [1m[36m (333.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 808ms (ActiveRecord: 688.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-07 16:17:13 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."user_id" = ? LIMIT 15 OFFSET 0[0m  [["user_id", 3]]
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 257ms (Views: 252.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:14 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:14 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:14 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:14 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:14 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:14 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:14 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:14 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:14 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:14 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:14 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:14 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:14 +0700
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-07 16:17:15 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8NHJqPyD3z8/APmKagDTa1a0yj2BkVIWU5r4eVlN4Dw="}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = 3  [["remember_created_at", nil], ["updated_at", "2015-01-07 09:17:15.471020"]]
+  [1m[36m (339.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 348ms (ActiveRecord: 340.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-07 16:17:15 +0700
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-07 16:17:15 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 289ms (Views: 286.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:16 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:16 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:16 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:16 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:16 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:16 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:16 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:16 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:16 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:16 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:16 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:16 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:16 +0700
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-07 16:17:29 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 275ms (Views: 272.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:30 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:30 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:30 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-07 16:17:30 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:30 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:30 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:30 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:30 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:30 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:30 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:30 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:30 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-07 16:17:30 +0700
