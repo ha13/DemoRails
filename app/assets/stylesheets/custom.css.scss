@@ -37,6 +37,8 @@ footer{
   clear: both;
   //border-top: 2px solid $gray;
 }
-
+.table, .table-bordered, .table-hover, table th{
+  text-align: center;
+}
 
 

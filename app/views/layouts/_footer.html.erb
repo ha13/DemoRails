@@ -1,18 +1,18 @@
 <footer class="footer">
   <small>
-    The <a href="#">Rails Tutorial</a>
-    by <a href="#">Michael Hartl</a>
+    The <a href="#"><%= t :rails%></a>
+    by <a href="#"><%= t :author%></a>
   </small>
   <nav>
     <ul>
       <li>
-        <%= link_to "About","#"%>
+        <%= link_to t(:about),"#"%>
       </li>
       <li>
-        <%= link_to "Contact", "#" %>
+        <%= link_to t(:contact), "#" %>
       </li>
       <li>
-        <a href="http://news.railstutorial.org">News</a>
+        <a href="http://news.railstutorial.org"><%=t :news %></a>
       </li>
     </ul>
   </nav>

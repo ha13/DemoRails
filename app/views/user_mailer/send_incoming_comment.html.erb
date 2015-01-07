@@ -4,8 +4,8 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Incoming comment form <%= @comment.commenter %>!</h1>
-    <p>Body: <%=@comment.body%></p>
-    <p><%= link_to "Back to current post",post_path(Comment.find(@comment).select(:post_id))%></p>
+    <p><%=t(".incoming_comment")%></p><p> <%= @comment.commenter %>!</p>
+    <p><%= t(".body_comment")%></p><p><%= @comment.body%></p>
+    <p><%= link_to t(".back_to_current_post"),post_url(id: @comment.post_id)%></p>
   </body>
 </html>
