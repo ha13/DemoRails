@@ -1,0 +1,10 @@
+$(document).ready(function() {
+  $("#new_comment").on("ajax:success",function(){
+    $("#list-comments")
+        .html('<table class="table table-bordered table-hover"><tr><th>Commenter</th><th>Comment</th></tr>' + ' <th colspan="2"><%= t :action%></th>'
+          +"#{escape_javascript(render partial: @comments)}" + '</table><div class="pull-right"><%= will_paginate @comments %></div>');
+
+      $("#comment_commenter").val('');
+      $("#comment_body").val('');
+  });
+});

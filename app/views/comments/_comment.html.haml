@@ -1,0 +1,10 @@
+
+
+%tr
+  %td= comment.commenter
+  %td= comment.body
+  %td= link_to 'Destroy Comment', [comment.post, comment],
+      method: :delete,
+      data: { confirm: 'Are you sure?' }
+  %td= comment.created_at
+

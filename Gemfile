@@ -44,3 +44,4 @@ gem 'delayed_job_active_record'
 gem 'friendly_id','5.0.4'
 gem 'devise'
 gem "daemons"
+gem "haml-rails"
