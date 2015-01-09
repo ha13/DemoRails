@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users do
+    get ':avatars', on: :member
+  end
   resources :posts do
     resources :comments
   end

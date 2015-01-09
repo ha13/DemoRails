@@ -34824,3 +34824,1929 @@ Processing by Devise::SessionsController#new as HTML
   Rendered layouts/_header.html.haml (0.8ms)
   Rendered layouts/_footer.html.haml (0.8ms)
 Completed 200 OK in 281ms (Views: 279.5ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentAvatarToUsers (20150109020337)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (3.6ms)[0m  [1mALTER TABLE "users" ADD "avatar_file_name" varchar(255)[0m
+  [1m[35m (2.2ms)[0m  ALTER TABLE "users" ADD "avatar_content_type" varchar(255)
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "avatar_file_size" integer[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD "avatar_updated_at" datetime
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150109020337"]]
+  [1m[35m (168.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_commenter' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_commenter' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_post_id' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='delayed_jobs_priority' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='delayed_jobs_priority' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_title' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_title' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unlock_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unlock_token' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 09:56:30 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 62ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-09 09:56:30 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.haml (3.9ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (78.9ms)
+  Rendered layouts/_shim.html.haml (1.7ms)
+  Rendered layouts/_header.html.haml (6.0ms)
+  Rendered layouts/_footer.html.haml (7.7ms)
+Completed 200 OK in 1009ms (Views: 977.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-09 09:56:31 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-09 09:56:31 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-09 09:56:31 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 09:56:31 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 09:56:31 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 09:56:31 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 09:56:32 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-09 09:56:32 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-09 09:56:32 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-09 09:56:32 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-09 09:56:32 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-09 09:56:32 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 09:56:32 +0700
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-09 09:56:35 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.haml within layouts/application (20.3ms)
+Completed 500 Internal Server Error in 63ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %i and nested within it.):
+    17:         = f.label :password
+    18:         - if @validatable
+    19:           %i= @minimum_password_length
+    20:             =t :characters_minimum
+    21:         %br
+    22:         = f.password_field :password, autocomplete: "off", class:"form-control"
+    23: 
+  app/views/devise/registrations/new.html.haml:20
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-09 09:56:35 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.haml within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %i and nested within it.):
+    17:         = f.label :password
+    18:         - if @validatable
+    19:           %i= @minimum_password_length
+    20:             =t :characters_minimum
+    21:         %br
+    22:         = f.password_field :password, autocomplete: "off", class:"form-control"
+    23: 
+  app/views/devise/registrations/new.html.haml:20
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-09 09:58:02 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.haml within layouts/application (88.4ms)
+Completed 500 Internal Server Error in 128ms
+
+ActionView::Template::Error (undefined method `file' for #<ActionView::Helpers::FormBuilder:0xbfc1740>):
+    28:       .form-group
+    29:         = f.label :avatar
+    30:         %br
+    31:         = f.file :avatar
+    32:       .form-group
+    33:         = f.submit t(:signup),class:"btn btn-primary"
+    34: 
+  app/views/devise/registrations/new.html.haml:31:in `block in _app_views_devise_registrations_new_html_haml___423021181_100742970'
+  app/views/devise/registrations/new.html.haml:4:in `_app_views_devise_registrations_new_html_haml___423021181_100742970'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.haml (0.7ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (37.6ms)
+  Rendered layouts/_shim.html.haml (0.2ms)
+  Rendered layouts/_header.html.haml (0.9ms)
+  Rendered layouts/_footer.html.haml (1.2ms)
+Completed 200 OK in 348ms (Views: 346.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 09:59:02 +0700
+
+
+Started POST "/users" for 127.0.0.1 at 2015-01-09 10:06:18 +0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mk0Oj22/npN1WLhWHXABCwdYW7cnv11DBXPcaQqA4m8=", "user"=>{"name"=>"hath14", "email"=>"hath14@hath.hath", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar"=>#<ActionDispatch::Http::UploadedFile:0xc542afc @tempfile=#<Tempfile:/tmp/RackMultipart20150109-12477-1q6e4u3>, @original_filename="matic1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"matic1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign Up"}
+Unpermitted parameters: avatar
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'hath14@hath.hath' LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."name") = LOWER('hath14') LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered devise/shared/_links.html.haml (0.7ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (23.8ms)
+  Rendered layouts/_shim.html.haml (0.4ms)
+  Rendered layouts/_header.html.haml (0.9ms)
+  Rendered layouts/_footer.html.haml (0.6ms)
+Completed 200 OK in 714ms (Views: 362.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-09 10:06:19 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-09 10:06:19 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:19 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 10:06:19 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:19 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-09 10:06:19 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:19 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:19 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:19 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:19 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:19 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:19 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:19 +0700
+
+
+Started POST "/users" for 127.0.0.1 at 2015-01-09 10:06:48 +0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mk0Oj22/npN1WLhWHXABCwdYW7cnv11DBXPcaQqA4m8=", "user"=>{"name"=>"hath14", "email"=>"hath14@hath.hath", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar"=>#<ActionDispatch::Http::UploadedFile:0xb05f248 @tempfile=#<Tempfile:/tmp/RackMultipart20150109-12477-jn2bf1>, @original_filename="matic1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"matic1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign Up"}
+Unpermitted parameters: avatar
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'hath14@hath.hath' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."name") = LOWER('hath14') LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered devise/shared/_links.html.haml (0.6ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (14.1ms)
+  Rendered layouts/_shim.html.haml (0.2ms)
+  Rendered layouts/_header.html.haml (1.5ms)
+  Rendered layouts/_footer.html.haml (1.2ms)
+Completed 200 OK in 469ms (Views: 312.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-09 10:06:49 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-09 10:06:49 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-09 10:06:49 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:49 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 10:06:49 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:49 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:49 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:49 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:49 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:49 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:49 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:49 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 10:06:49 +0700
+
+
+Started POST "/users" for 127.0.0.1 at 2015-01-09 10:11:14 +0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mk0Oj22/npN1WLhWHXABCwdYW7cnv11DBXPcaQqA4m8=", "user"=>{"name"=>"hath14", "email"=>"hath14@hath.hath", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar"=>#<ActionDispatch::Http::UploadedFile:0xbebfcd4 @tempfile=#<Tempfile:/tmp/RackMultipart20150109-12477-3v10br>, @original_filename="matic1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"matic1.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign Up"}
+Command :: file -b --mime '/tmp/d71e13fd85a0c79e0ce6e3deae5e428c20150109-12477-1dsqq2a.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d71e13fd85a0c79e0ce6e3deae5e428c20150109-12477-2ky81z.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d71e13fd85a0c79e0ce6e3deae5e428c20150109-12477-2ky81z.jpg[0]'
+Command :: convert '/tmp/d71e13fd85a0c79e0ce6e3deae5e428c20150109-12477-2ky81z.jpg[0]' -auto-orient -resize "75x75" '/tmp/d71e13fd85a0c79e0ce6e3deae5e428c20150109-12477-2ky81z20150109-12477-1uncf88'
+Command :: file -b --mime '/tmp/d71e13fd85a0c79e0ce6e3deae5e428c20150109-12477-2ky81z20150109-12477-1uncf88'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/d71e13fd85a0c79e0ce6e3deae5e428c20150109-12477-2ky81z.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/d71e13fd85a0c79e0ce6e3deae5e428c20150109-12477-2ky81z.jpg[0]'
+Command :: convert '/tmp/d71e13fd85a0c79e0ce6e3deae5e428c20150109-12477-2ky81z.jpg[0]' -auto-orient -resize "150x150" '/tmp/d71e13fd85a0c79e0ce6e3deae5e428c20150109-12477-2ky81z20150109-12477-kgtu3'
+Command :: file -b --mime '/tmp/d71e13fd85a0c79e0ce6e3deae5e428c20150109-12477-2ky81z20150109-12477-kgtu3'
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'hath14@hath.hath' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."name") = LOWER('hath14') LIMIT 1
+Command :: file -b --mime '/tmp/d71e13fd85a0c79e0ce6e3deae5e428c20150109-12477-ocaajb.jpg'
+Binary data inserted for `string` type on column `avatar_content_type`
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "users" ("avatar_content_type", "avatar_file_name", "avatar_file_size", "avatar_updated_at", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["avatar_content_type", "image/jpeg"], ["avatar_file_name", "matic1.jpg"], ["avatar_file_size", 6534], ["avatar_updated_at", "2015-01-09 03:11:14.540787"], ["created_at", "2015-01-09 03:11:15.614367"], ["email", "hath14@hath.hath"], ["encrypted_password", "$2a$10$H0HaG0T2.zP61RBQVfYDsemKrCz0EmWp.Egm34qsiOiCO6TKUJzaK"], ["name", "hath14"], ["updated_at", "2015-01-09 03:11:15.614367"]]
+  [1m[35m (197.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[35mSQL (1.1ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 4  [["current_sign_in_at", "2015-01-09 03:11:15.889009"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2015-01-09 03:11:15.889009"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2015-01-09 03:11:15.892444"]]
+  [1m[36m (156.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1701ms (ActiveRecord: 361.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:11:16 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 260ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:25: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...od: :delete,data: {confirm: t :delete_confirm}
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: unknown regexp options - tr
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected $undefined
+));}\n      </td>\n    </tr>\n  </table>\n  <div class='pu...
+                             ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:28: unknown regexp options - dv
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:28: syntax error, unexpected $undefined
+));}\n  </div>\n  <div class='pull-left'>\n    #{
+               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:28: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+));}\n  </div>\n  <div class='pull-left'>\n    #{
+                            ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:28: syntax error, unexpected $undefined
+));}\n  </div>\n  <div class='pull-left'>\n    #{
+                                          ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected '}', expecting ')'
+));}\n  </div>\n</div>\n", -2, fa...
+    ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: unknown regexp options - dv
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected $undefined
+));}\n  </div>\n</div>\n", -2, false);::Haml::Util.h...
+                       ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: unterminated string meets end of file
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/posts/index.html.haml:25: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/views/posts/index.html.haml:26: unknown regexp options - tr
+  app/views/posts/index.html.haml:26: syntax error, unexpected $undefined
+  app/views/posts/index.html.haml:28: unknown regexp options - dv
+  app/views/posts/index.html.haml:28: syntax error, unexpected $undefined
+  app/views/posts/index.html.haml:28: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+  app/views/posts/index.html.haml:28: syntax error, unexpected $undefined
+  app/views/posts/index.html.haml:30: syntax error, unexpected '}', expecting ')'
+  app/views/posts/index.html.haml:30: unknown regexp options - dv
+  app/views/posts/index.html.haml:30: syntax error, unexpected $undefined
+  app/views/posts/index.html.haml:30: unterminated string meets end of file
+  app/views/posts/index.html.haml:30: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:12:32 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 27ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:25: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...od: :delete,data: {confirm: t :delete_confirm}}
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: unknown regexp options - tr
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected $undefined
+));}\n      </td>\n    </tr>\n  </table>\n  <div class='pu...
+                             ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:28: unknown regexp options - dv
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:28: syntax error, unexpected $undefined
+));}\n  </div>\n  <div class='pull-left'>\n    #{
+               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:28: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+));}\n  </div>\n  <div class='pull-left'>\n    #{
+                            ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:28: syntax error, unexpected $undefined
+));}\n  </div>\n  <div class='pull-left'>\n    #{
+                                          ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected '}', expecting ')'
+));}\n  </div>\n</div>\n", -2, fa...
+    ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: unknown regexp options - dv
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected $undefined
+));}\n  </div>\n</div>\n", -2, false);::Haml::Util.h...
+                       ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: unterminated string meets end of file
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/posts/index.html.haml:25: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/views/posts/index.html.haml:26: unknown regexp options - tr
+  app/views/posts/index.html.haml:26: syntax error, unexpected $undefined
+  app/views/posts/index.html.haml:28: unknown regexp options - dv
+  app/views/posts/index.html.haml:28: syntax error, unexpected $undefined
+  app/views/posts/index.html.haml:28: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+  app/views/posts/index.html.haml:28: syntax error, unexpected $undefined
+  app/views/posts/index.html.haml:30: syntax error, unexpected '}', expecting ')'
+  app/views/posts/index.html.haml:30: unknown regexp options - dv
+  app/views/posts/index.html.haml:30: syntax error, unexpected $undefined
+  app/views/posts/index.html.haml:30: unterminated string meets end of file
+  app/views/posts/index.html.haml:30: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:12:51 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 29ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:25: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...d: :delete,data: {confirm: {t :delete_confirm}}
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: unknown regexp options - tr
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected $undefined
+));}\n      </td>\n    </tr>\n  </table>\n  <div class='pu...
+                             ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:28: unknown regexp options - dv
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:28: syntax error, unexpected $undefined
+));}\n  </div>\n  <div class='pull-left'>\n    #{
+               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:28: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+));}\n  </div>\n  <div class='pull-left'>\n    #{
+                            ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:28: syntax error, unexpected $undefined
+));}\n  </div>\n  <div class='pull-left'>\n    #{
+                                          ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected '}', expecting ')'
+));}\n  </div>\n</div>\n", -2, fa...
+    ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: unknown regexp options - dv
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected $undefined
+));}\n  </div>\n</div>\n", -2, false);::Haml::Util.h...
+                       ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: unterminated string meets end of file
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/posts/index.html.haml:25: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/views/posts/index.html.haml:26: unknown regexp options - tr
+  app/views/posts/index.html.haml:26: syntax error, unexpected $undefined
+  app/views/posts/index.html.haml:28: unknown regexp options - dv
+  app/views/posts/index.html.haml:28: syntax error, unexpected $undefined
+  app/views/posts/index.html.haml:28: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+  app/views/posts/index.html.haml:28: syntax error, unexpected $undefined
+  app/views/posts/index.html.haml:30: syntax error, unexpected '}', expecting ')'
+  app/views/posts/index.html.haml:30: unknown regexp options - dv
+  app/views/posts/index.html.haml:30: syntax error, unexpected $undefined
+  app/views/posts/index.html.haml:30: unterminated string meets end of file
+  app/views/posts/index.html.haml:30: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:13:11 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (22.4ms)
+Completed 500 Internal Server Error in 48ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:14:53 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 29ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:17:44 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 43ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:18:31 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 33ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:20:37 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 28ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:21:19 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 26ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:21:21 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 26ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:22:31 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 33ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:24:08 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 29ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:25:10 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 26ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:30: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:33: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:25:23 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 30ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:28:44 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 28ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:05 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 30ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:06 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 35ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:07 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 36ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:08 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 27ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:08 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 26ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:08 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 26ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:08 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 30ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:09 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (3.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 49ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:09 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 55ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:09 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 28ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:09 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 38ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:09 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 31ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:10 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 48ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:10 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 26ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:10 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 36ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:10 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 56ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:30:10 +0700
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered posts/index.html.haml within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 49ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+...>\n    </tr>\n", -2, false);end;_hamlout.push_text("  </tabl...
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+...uffer.upper if @haml_buffer;end;
+...                               ^
+/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'):
+  app/views/posts/index.html.haml:26: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_ensure, expecting '}'
+  app/views/posts/index.html.haml:31: syntax error, unexpected keyword_end, expecting '}'
+  app/views/posts/index.html.haml:34: syntax error, unexpected keyword_end, expecting '}'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:31:03 +0700
+Processing by PostsController#index as HTML
+  [1m[35mUser Load (3.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPost Load (2.5ms)[0m  [1mSELECT  "posts".* FROM "posts"  WHERE "posts"."user_id" = ? LIMIT 15 OFFSET 0[0m  [["user_id", 4]]
+  Rendered posts/index.html.haml within layouts/application (15.4ms)
+  Rendered layouts/_shim.html.haml (0.3ms)
+  Rendered layouts/_header.html.haml (82.4ms)
+  Rendered layouts/_footer.html.haml (1.0ms)
+Completed 200 OK in 396ms (Views: 385.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+
+Started GET "/users/4/avatars?1420773074" for 127.0.0.1 at 2015-01-09 10:31:04 +0700
+
+ActionController::RoutingError (No route matches [GET] "/users/4/avatars"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (23.0ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (95.4ms)
+
+
+Started GET "/users/edit.4" for 127.0.0.1 at 2015-01-09 10:31:43 +0700
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.haml within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 83ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %p and nested within it.):
+    43: %h3= t :title_cancel_account,scope:[:devise,:registrations]
+    44: 
+    45: %p=t (:unhappy)
+    46:   = button_to t(:title_cancel_account,scope:[:devise,:registrations]), registration_path(resource_name), data: { confirm: t :delete_confirm }, method: :delete,class:"btn btn-danger"
+    47: 
+    48: = link_to t(:back_devise), :back
+  app/views/devise/registrations/edit.html.haml:46
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.8ms)
+
+
+Started GET "/users/edit.4" for 127.0.0.1 at 2015-01-09 10:31:43 +0700
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.haml within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 109ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %p and nested within it.):
+    43: %h3= t :title_cancel_account,scope:[:devise,:registrations]
+    44: 
+    45: %p=t (:unhappy)
+    46:   = button_to t(:title_cancel_account,scope:[:devise,:registrations]), registration_path(resource_name), data: { confirm: t :delete_confirm }, method: :delete,class:"btn btn-danger"
+    47: 
+    48: = link_to t(:back_devise), :back
+  app/views/devise/registrations/edit.html.haml:46
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.1ms)
+
+
+Started GET "/users/edit.4" for 127.0.0.1 at 2015-01-09 10:32:23 +0700
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mUser Load (2.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.haml within layouts/application (22.3ms)
+Completed 500 Internal Server Error in 114ms
+
+SyntaxError (/media/DATA2/train/Rails/Rails1/DemoApp1/app/views/devise/registrations/edit.html.haml:46: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...rce_name), data: { confirm: t :delete_confirm }, method: :de...
+...                               ^):
+  app/views/devise/registrations/edit.html.haml:46: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.6ms)
+
+
+Started GET "/users/edit.4" for 127.0.0.1 at 2015-01-09 10:32:52 +0700
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.haml within layouts/application (18.4ms)
+  Rendered layouts/_shim.html.haml (2.2ms)
+  Rendered layouts/_header.html.haml (9.8ms)
+  Rendered layouts/_footer.html.haml (7.1ms)
+Completed 200 OK in 656ms (Views: 651.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+
+Started GET "/users/4/avatars?1420773074" for 127.0.0.1 at 2015-01-09 10:32:53 +0700
+
+ActionController::RoutingError (No route matches [GET] "/users/4/avatars"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (46.1ms)
+
+
+Started GET "/users/edit.4" for 127.0.0.1 at 2015-01-09 10:37:39 +0700
+Processing by Devise::RegistrationsController#edit as 
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.haml within layouts/application (13.7ms)
+  Rendered layouts/_shim.html.haml (0.4ms)
+  Rendered layouts/_header.html.haml (6.1ms)
+  Rendered layouts/_footer.html.haml (1.2ms)
+Completed 200 OK in 750ms (Views: 703.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+
+Started GET "/system/avatars/4/thumb/matic1.jpg?1420773074" for 127.0.0.1 at 2015-01-09 10:37:40 +0700
+
+ActionController::RoutingError (No route matches [GET] "/system/avatars/4/thumb/matic1.jpg"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.7ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (50.9ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-09 10:53:44 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Mk0Oj22/npN1WLhWHXABCwdYW7cnv11DBXPcaQqA4m8="}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 40ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-09 10:53:44 +0700
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-09 10:53:44 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.haml (0.7ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (16.3ms)
+  Rendered layouts/_shim.html.haml (0.2ms)
+  Rendered layouts/_header.html.haml (0.9ms)
+  Rendered layouts/_footer.html.haml (0.6ms)
+Completed 200 OK in 369ms (Views: 365.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-09 10:53:44 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-09 10:53:44 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-09 10:53:44 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 10:53:44 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-09 10:53:44 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 10:53:44 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 10:53:44 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 10:53:45 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-09 10:53:45 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-09 10:53:45 +0700
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-09 10:53:45 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-09 10:53:45 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 10:53:45 +0700
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-09 10:53:47 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.haml (0.6ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (48.7ms)
+  Rendered layouts/_shim.html.haml (0.2ms)
+  Rendered layouts/_header.html.haml (1.2ms)
+  Rendered layouts/_footer.html.haml (1.2ms)
+Completed 200 OK in 384ms (Views: 381.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/avatar" for 127.0.0.1 at 2015-01-09 10:53:47 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/avatar"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.3ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.8ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-09 10:56:02 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.haml (0.7ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (48.4ms)
+  Rendered layouts/_shim.html.haml (0.2ms)
+  Rendered layouts/_header.html.haml (0.9ms)
+  Rendered layouts/_footer.html.haml (0.9ms)
+Completed 200 OK in 343ms (Views: 341.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+
+Started GET "/assets/jquery_validate.js?body=1" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+
+Started GET "/assets/post.js?body=1" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+
+Started GET "/images/avatar" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/avatar"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (63.5ms)
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+
+Started GET "/images/avatar" for 127.0.0.1 at 2015-01-09 10:56:03 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/avatar"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.7ms)
+
+
+Started GET "/images/avatar" for 127.0.0.1 at 2015-01-09 10:56:27 +0700
+
+ActionController::RoutingError (No route matches [GET] "/images/avatar"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/case004/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.5ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /home/case004/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (50.4ms)

@@ -6,6 +6,7 @@
         -if user_signed_in?
           %li.dropdown
             %a.dropdown-toggle{href:"#","data-toggle"=>"dropdown"}
+              = image_tag current_user.avatar.url(:thumb)
               =current_user.name
               %b.caret
 

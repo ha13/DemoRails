@@ -45,3 +45,5 @@ gem 'friendly_id','5.0.4'
 gem 'devise'
 gem "daemons"
 gem "haml-rails"
+gem "paperclip", "~> 4.2"
+gem 'aws-sdk', '~> 1.5.7'
