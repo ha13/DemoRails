@@ -30,6 +30,7 @@ en:
         comment:
           commenter: "Commenter"
           body: "Comment"
+          file_upload: "File Attached"
     errors:
       models:
         post:

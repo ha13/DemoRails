@@ -27,7 +27,8 @@ class PostsController < ApplicationController
   end
   def show
     @post = current_user.posts.find(params[:id])
-    @comments = @post.comments.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+    @comments = @post.comments.order(created_at: :desc).paginate(page: params[:page], per_page: 5)
+
   end
   def destroy
     @post = current_user.posts.find(params[:id])

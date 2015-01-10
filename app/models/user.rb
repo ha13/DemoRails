@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validates :name, uniqueness: {case_sensitive: false}, length: {minimum: 6}
   has_many :posts, dependent: :destroy
   has_attached_file :avatar,
-                    path: ":rails_root/non-public/system/:attachment/:id/:style/:basename.:extension",
+                    path: ":rails_root/public/system/:attachment/:id/:style/:basename.:extension",
                     url: "/system/:attachment/:id/:style/:basename.:extension",
                     styles: {
                       thumb: "75x75",

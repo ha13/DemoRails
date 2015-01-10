@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users do
-    get ':avatars', on: :member
-  end
+  # devise_scope :user do
+  #      get "users/avatars", to: "users/registrations#avatars"
+  #   end
+  devise_for :users#, controllers: { registrations: "users/registrations" }
+
   resources :posts do
     resources :comments
   end

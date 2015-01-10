@@ -1,4 +1,4 @@
-%h2=t ".title",email_user: current_user.email
+%h2=t ".title",email_user: current_user.name
 .table-responsive
   %table.table.table-bordered.table-hover
     %tr
@@ -9,11 +9,12 @@
       %td= @post.text
 
 %h2= t :comments
-.table-responsive#list-comments
+.table-responsive#list_comments
   %table.table.table-bordered.table-hover
     %tr
       %th= t :commenter,scope:[:activerecord,:models,:attributes,:comment]
       %th= t :body,scope:[:activerecord,:models,:attributes,:comment]
+      %th= t :file_upload,scope:[:activerecord,:models,:attributes,:comment]
       %th{colspan:"2"}= t :action
     = render @comments
   .pull-right
@@ -21,7 +22,7 @@
 
 .add-comment
   %h2= t :add_comment
-  = render 'comments/comment_form'
+  = render partial:'comments/comment_form'
 = link_to t(:title, scope:[:posts,:edit]), edit_post_path(@post)
- |
+|
 = link_to t(:back), posts_path
