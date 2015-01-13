@@ -3,7 +3,6 @@ class Post < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   validates :title, presence: true, length: {minimum: 6}
   extend FriendlyId
-
   friendly_id :slug_candidates, use: [:slugged,:finders]
   private
   def slug_candidates

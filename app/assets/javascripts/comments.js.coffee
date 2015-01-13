@@ -3,11 +3,9 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
   $("#new_comment").validate
-    # debug: true
     rules:
       "comment[body]":
         required: true
-
     messages:
       "comment[body]":
         required: "Body can't be blank"

@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   def update
     @post = current_user.posts.find(params[:id])
     if(@post.update_attributes(post_params))
-      redirect_to @post
+      redirect_to posts_path
     else
       render 'edit'
     end
@@ -28,7 +28,6 @@ class PostsController < ApplicationController
   def show
     @post = current_user.posts.find(params[:id])
     @comments = @post.comments.order(created_at: :desc).paginate(page: params[:page], per_page: 5)
-
   end
   def destroy
     @post = current_user.posts.find(params[:id])

@@ -3,12 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
   $("#new_post").validate
-    debug: true
     rules:
       "post[title]":
         required: true
         minlength: 6
-
     messages:
       "post[title]":
         required: "Title can't be blank"

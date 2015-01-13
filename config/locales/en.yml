@@ -42,7 +42,7 @@ en:
   #mailer
   user_mailer:
     send_incoming_comment:
-      incoming_comment: "Incoming comment from"
+      incoming_comment: "Incoming comment "
       body_comment: "Body comment"
       back_to_current_post: "Back to current post"
   #edit post

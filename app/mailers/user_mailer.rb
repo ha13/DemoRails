@@ -4,7 +4,6 @@ class UserMailer < ActionMailer::Base
     @user = user
     @comment = comment
     mail(to: @user.email,
-         subject: "Incoming comment")
-         #body: "#{@comment.commenter} comments #{@comment.body}")
+         subject: t(:incoming_comment ,scope:[:user_mailer,:incoming_comment]))
   end
 end

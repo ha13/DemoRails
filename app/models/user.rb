@@ -17,10 +17,7 @@ class User < ActiveRecord::Base
                         presence: true,
                         size: {in: 0..10.megabytes},
                         content_type: {content_type: /^image\/(jpeg|png|gif|tiff)$/}
-
-
   attr_accessor :login
-
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
